@@ -9,10 +9,42 @@ print('''
 
 chars ='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+-=<>?:"|\';[].,/~`0123456789'
 
-number = int(input('Number of Passwords??'))
-length = int(input('paswword length ?'))
-
-print('thats your passwords')
+while True:
+    try :
+        number = int(input('''
+        =======================================
+            How many password do you want ? 
+        =======================================
+        '''))
+        break
+    except  ValueError : 
+        print('''
+        ===============================================
+            ===> you have to enter int not str <=== 
+        ===============================================
+        ''')
+   
+while True:
+    try : 
+        length = int(input('''
+        ============================================
+            How long do you want your password ? 
+        ============================================
+        '''))
+        break
+    except ValueError :
+        print('''
+        ==============================================
+           ===> you have to enter int not str <===
+        ==============================================
+        ''')
+    
+print()
+print('''
+    &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+        Here are your passwords :
+    &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+    ''')
 
 for pwd in range(number):
     password = ''
